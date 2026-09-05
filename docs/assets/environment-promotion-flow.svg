@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Automatic lower-environment promotion flow</title>
+  <desc id="desc">A reviewed merge deploys to development, passes integration tests, and deploys to test before the release proceeds to the next controlled gate.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 19px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}.arrow{stroke:#52667f;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="520" fill="#f7f9fc"/>
+  <text x="800" y="52" text-anchor="middle" class="title">Automatic lower-environment promotion</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Each gate produces evidence before the immutable release advances</text>
+  <rect x="45" y="135" width="255" height="150" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="172" y="190" text-anchor="middle" class="node-title">Reviewed merge</text><text x="172" y="222" text-anchor="middle" class="node-text">Source and policy checks</text><text x="172" y="247" text-anchor="middle" class="node-text">create the release input</text>
+  <rect x="365" y="135" width="255" height="150" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="492" y="190" text-anchor="middle" class="node-title">Development</text><text x="492" y="222" text-anchor="middle" class="node-text">Deploy the same artifact</text><text x="492" y="247" text-anchor="middle" class="node-text">to the lower environment</text>
+  <rect x="685" y="135" width="255" height="150" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="812" y="190" text-anchor="middle" class="node-title">Integration tests</text><text x="812" y="222" text-anchor="middle" class="node-text">Connectivity, policy, and</text><text x="812" y="247" text-anchor="middle" class="node-text">service behavior evidence</text>
+  <rect x="1005" y="135" width="255" height="150" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1132" y="190" text-anchor="middle" class="node-title">Test environment</text><text x="1132" y="222" text-anchor="middle" class="node-text">Deploy after the gate</text><text x="1132" y="247" text-anchor="middle" class="node-text">and repeat validation</text>
+  <rect x="1325" y="135" width="230" height="150" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1440" y="190" text-anchor="middle" class="node-title">Next gate</text><text x="1440" y="222" text-anchor="middle" class="node-text">Evidence is ready for</text><text x="1440" y="247" text-anchor="middle" class="node-text">approval or promotion</text>
+  <path d="M300 210 H355 M620 210 H675 M940 210 H995 M1260 210 H1315" class="arrow"/>
+  <text x="800" y="365" text-anchor="middle" class="label">Same immutable artifact · environment-specific configuration · explicit evidence</text>
+  <rect x="255" y="395" width="1090" height="52" rx="26" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="800" y="428" text-anchor="middle" class="node-text">A production plan or deployment remains environment-specific and must be generated against production state.</text>
+</svg>

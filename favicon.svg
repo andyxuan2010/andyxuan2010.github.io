@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Andy Xuan cloud engineering mark</title>
+  <desc id="desc">A small cloud with an orbit and a star.</desc>
+  <defs>
+    <linearGradient id="sky" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162849"/>
+      <stop offset="1" stop-color="#081221"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="18" y1="25" x2="47" y2="45" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8fbff"/>
+      <stop offset="1" stop-color="#71e6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#sky)"/>
+  <path d="M13 39c0-5 4-9 9-9 1-7 7-12 14-12 8 0 14 6 15 14 3 1 5 4 5 7 0 5-4 9-9 9H22c-5 0-9-4-9-9Z" fill="none" stroke="#38d3ff" stroke-width="2.5" opacity=".9"/>
+  <path d="M17 41c0-4 3-7 7-7 1-5 5-8 10-8 6 0 10 4 11 10 3 0 5 2 5 5 0 3-3 6-6 6H23c-3 0-6-3-6-6Z" fill="url(#cloud)"/>
+  <path d="M14 25c9-10 27-13 38-4 5 4 8 9 9 15" fill="none" stroke="#3edbb0" stroke-linecap="round" stroke-width="2" opacity=".85"/>
+  <circle cx="15" cy="25" r="3" fill="#3edbb0"/>
+  <path d="m49 12 1.6 3.4L54 17l-3.4 1.6L49 22l-1.6-3.4L44 17l3.4-1.6L49 12Z" fill="#ffbd38"/>
+</svg>

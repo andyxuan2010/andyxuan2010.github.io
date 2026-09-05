@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Cloudflare</title>
+  <rect x="4" y="4" width="88" height="88" rx="22" fill="#fff7ed" stroke="#f48120" stroke-width="3"/>
+  <path d="M19 59c0-7 6-13 13-13 3-9 11-15 21-15 10 0 19 7 21 17 6 0 11 5 11 11 0 7-5 12-12 12H31c-7 0-12-5-12-12Z" fill="#f48120"/>
+  <text x="48" y="65" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="900" fill="#fff">CF</text>
+</svg>

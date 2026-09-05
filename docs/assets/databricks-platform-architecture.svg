@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 690" role="img" aria-labelledby="title desc">
+  <title id="title">Databricks platform architecture</title>
+  <desc id="desc">Enterprise identity flows into Databricks account governance and development, test, and production workspaces. Each workspace uses policy-controlled compute and cloud object storage. A central catalog provides lineage and grants across workspaces, while logs, metrics, cost, and security events report to account governance.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 18px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="690" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Databricks platform architecture</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Separate workspaces share governed identity, catalog, storage, and operational telemetry</text>
+
+  <rect x="55" y="125" width="250" height="82" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="180" y="158" text-anchor="middle" class="node-title">Enterprise identity</text><text x="180" y="184" text-anchor="middle" class="node-text">Provider and access policies</text>
+  <rect x="385" y="125" width="300" height="82" rx="14" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="535" y="158" text-anchor="middle" class="node-title">Databricks account governance</text><text x="535" y="184" text-anchor="middle" class="node-text">Identity, policies, administration</text>
+  <path d="M305 166 H375" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="65" y="285" width="300" height="88" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="215" y="320" text-anchor="middle" class="node-title">Development workspace</text><text x="215" y="348" text-anchor="middle" class="node-text">Policy-controlled compute</text>
+  <rect x="455" y="285" width="300" height="88" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="605" y="320" text-anchor="middle" class="node-title">Test workspace</text><text x="605" y="348" text-anchor="middle" class="node-text">Policy-controlled compute</text>
+  <rect x="845" y="285" width="300" height="88" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="995" y="320" text-anchor="middle" class="node-title">Production workspace</text><text x="995" y="348" text-anchor="middle" class="node-text">Policy-controlled compute</text>
+  <path d="M535 207 V250 H215 V275 M535 250 H605 V275 M535 250 H995 V275" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="65" y="435" width="300" height="82" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="215" y="468" text-anchor="middle" class="node-title">Cloud object storage</text><text x="215" y="494" text-anchor="middle" class="node-text">Tables, files, checkpoints</text>
+  <rect x="455" y="435" width="300" height="82" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="605" y="468" text-anchor="middle" class="node-title">Cloud object storage</text><text x="605" y="494" text-anchor="middle" class="node-text">Tables, files, checkpoints</text>
+  <rect x="845" y="435" width="300" height="82" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="995" y="468" text-anchor="middle" class="node-title">Cloud object storage</text><text x="995" y="494" text-anchor="middle" class="node-text">Tables, files, checkpoints</text>
+  <path d="M215 373 V425 M605 373 V425 M995 373 V425" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="1215" y="255" width="320" height="95" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="1375" y="290" text-anchor="middle" class="node-title">Central catalog</text><text x="1375" y="317" text-anchor="middle" class="node-text">Lineage, grants, discovery</text>
+  <path d="M1215 303 H1165 M1215 303 C1100 390 760 390 755 303 M1215 303 C1050 430 450 430 365 303" fill="none" stroke="#7654c5" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+  <rect x="1215" y="425" width="320" height="95" rx="16" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="1375" y="460" text-anchor="middle" class="node-title">Operational telemetry</text><text x="1375" y="487" text-anchor="middle" class="node-text">Logs, metrics, cost, security events</text>
+  <path d="M685 166 H1185 V465 H1205" fill="none" stroke="#c55a11" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+  <rect x="290" y="585" width="1020" height="42" rx="21" fill="#ffffff" stroke="#b8c7d9"/><text x="800" y="612" text-anchor="middle" class="label">Governance should be centralized; workspace and compute boundaries should reflect environment, regulatory, and blast-radius needs</text>
+</svg>

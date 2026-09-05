@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise cloud network architecture</title>
+  <desc id="desc">Users, partners, and data centres enter through global edge, private connectivity, and identity-aware ingress into regional transit. Transit provides inspection, hybrid DNS, and routes to Azure, AWS, GCP, and OCI environments that use a private service plane.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 19px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}.small{font:400 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="800" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Enterprise cloud network architecture</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Centralize edge, transit, inspection, DNS, and private service access across environments</text>
+
+  <rect x="40" y="120" width="220" height="82" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="150" y="153" text-anchor="middle" class="node-title">Users and devices</text><text x="150" y="180" text-anchor="middle" class="node-text">Workforce and clients</text>
+  <rect x="40" y="230" width="220" height="82" rx="14" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="150" y="263" text-anchor="middle" class="node-title">Partners and SaaS</text><text x="150" y="290" text-anchor="middle" class="node-text">External dependencies</text>
+  <rect x="40" y="410" width="220" height="82" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="150" y="443" text-anchor="middle" class="node-title">Data centres and branches</text><text x="150" y="470" text-anchor="middle" class="node-text">Private network origins</text>
+
+  <rect x="315" y="155" width="250" height="110" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="440" y="193" text-anchor="middle" class="node-title">Global edge</text><text x="440" y="220" text-anchor="middle" class="node-text">DNS · CDN · WAF · DDoS</text><text x="440" y="243" text-anchor="middle" class="small">Public ingress boundary</text>
+  <rect x="315" y="405" width="250" height="110" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="440" y="443" text-anchor="middle" class="node-title">Private connectivity</text><text x="440" y="470" text-anchor="middle" class="node-text">Circuits and VPN</text><text x="440" y="493" text-anchor="middle" class="small">Hybrid network boundary</text>
+
+  <rect x="625" y="155" width="250" height="110" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="750" y="193" text-anchor="middle" class="node-title">Identity-aware ingress</text><text x="750" y="220" text-anchor="middle" class="node-text">Authentication and access</text><text x="750" y="243" text-anchor="middle" class="small">Controlled application entry</text>
+  <rect x="625" y="405" width="250" height="110" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="750" y="443" text-anchor="middle" class="node-title">Regional transit</text><text x="750" y="470" text-anchor="middle" class="node-text">Route domains and policy</text><text x="750" y="493" text-anchor="middle" class="small">Shared connectivity plane</text>
+
+  <rect x="965" y="300" width="250" height="110" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="1090" y="338" text-anchor="middle" class="node-title">Inspection and egress</text><text x="1090" y="365" text-anchor="middle" class="node-text">Firewall and route controls</text><text x="1090" y="388" text-anchor="middle" class="small">Central security enforcement</text>
+  <rect x="1265" y="300" width="250" height="110" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="1390" y="338" text-anchor="middle" class="node-title">Hybrid DNS resolvers</text><text x="1390" y="365" text-anchor="middle" class="node-text">Private name resolution</text><text x="1390" y="388" text-anchor="middle" class="small">Cloud and on-premises zones</text>
+
+  <path d="M260 161 H305 M260 271 H305 M260 451 H305" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M565 210 H615 M440 312 V395 M750 275 V395 M875 460 H945 M875 460 H1245" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="45" y="590" width="330" height="90" rx="15" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="210" y="626" text-anchor="middle" class="node-title">Azure landing zones</text><text x="210" y="654" text-anchor="middle" class="node-text">Management groups and VNets</text>
+  <rect x="425" y="590" width="330" height="90" rx="15" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="590" y="626" text-anchor="middle" class="node-title">AWS accounts and VPCs</text><text x="590" y="654" text-anchor="middle" class="node-text">Transit and workload networks</text>
+  <rect x="805" y="590" width="330" height="90" rx="15" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="970" y="626" text-anchor="middle" class="node-title">GCP projects and VPCs</text><text x="970" y="654" text-anchor="middle" class="node-text">Shared and service projects</text>
+  <rect x="1185" y="590" width="330" height="90" rx="15" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="1350" y="626" text-anchor="middle" class="node-title">OCI compartments and VCNs</text><text x="1350" y="654" text-anchor="middle" class="node-text">Regional cloud boundaries</text>
+  <path d="M750 515 V550 H210 V580 M750 550 H590 V580 M750 550 H970 V580 M750 550 H1350 V580" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="330" y="715" width="940" height="48" rx="24" fill="#ffffff" stroke="#b8c7d9"/><text x="800" y="745" text-anchor="middle" class="label">All provider environments consume shared private services through controlled transit and security boundaries</text>
+</svg>

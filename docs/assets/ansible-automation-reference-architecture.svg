@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+  <title id="title">Ansible automation reference architecture</title>
+  <desc id="desc">The architecture separates authoring and governance, automation control, trust and integration services, and managed targets. Git review and CI publish controlled execution environments to the controller, which uses identity, schedules, inventory, secrets, and APIs to manage infrastructure and applications while producing audit and observability evidence.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.group{font:700 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 17px Arial,sans-serif;fill:#15253d}.node-text{font:400 14px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="850" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Ansible automation reference architecture</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Governed authoring feeds a controlled automation plane that reaches trusted enterprise targets</text>
+
+  <rect x="35" y="125" width="350" height="570" rx="20" fill="#ffffff" stroke="#2878c8" stroke-width="3"/><text x="210" y="160" text-anchor="middle" class="group">Authoring and governance plane</text>
+  <rect x="75" y="205" width="270" height="70" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="210" y="247" text-anchor="middle" class="node-title">Git repositories</text>
+  <rect x="75" y="305" width="270" height="70" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="210" y="347" text-anchor="middle" class="node-title">Pull request review</text>
+  <rect x="75" y="405" width="270" height="70" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="210" y="447" text-anchor="middle" class="node-title">CI validation and build</text>
+  <rect x="75" y="505" width="270" height="70" rx="13" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="210" y="535" text-anchor="middle" class="node-title">Execution registry</text><text x="210" y="559" text-anchor="middle" class="node-text">Collections and environments</text>
+  <rect x="75" y="605" width="270" height="55" rx="13" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="210" y="639" text-anchor="middle" class="node-title">Policy and approvals</text>
+  <path d="M210 275 V295 M210 375 V395 M210 475 V495 M210 475 C365 475 365 632 355 632" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="425" y="125" width="350" height="570" rx="20" fill="#ffffff" stroke="#2e8b57" stroke-width="3"/><text x="600" y="160" text-anchor="middle" class="group">Automation control plane</text>
+  <rect x="465" y="205" width="270" height="70" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="600" y="247" text-anchor="middle" class="node-title">Self-service portal or ticket</text>
+  <rect x="465" y="305" width="270" height="85" rx="13" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="600" y="341" text-anchor="middle" class="node-title">Automation controller</text><text x="600" y="367" text-anchor="middle" class="node-text">Jobs and execution policy</text>
+  <rect x="465" y="420" width="270" height="70" rx="13" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="600" y="462" text-anchor="middle" class="node-title">Schedules and event rules</text>
+  <rect x="465" y="520" width="270" height="70" rx="13" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="600" y="562" text-anchor="middle" class="node-title">RBAC, teams, credentials</text>
+  <rect x="465" y="620" width="270" height="55" rx="13" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="600" y="654" text-anchor="middle" class="node-title">Job records and audit</text>
+  <path d="M600 275 V295 M600 390 V410 M600 490 V510 M600 390 V610" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="815" y="125" width="350" height="570" rx="20" fill="#ffffff" stroke="#7654c5" stroke-width="3"/><text x="990" y="160" text-anchor="middle" class="group">Trust and integration services</text>
+  <rect x="855" y="205" width="270" height="70" rx="13" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="990" y="247" text-anchor="middle" class="node-title">Inventory sources</text>
+  <rect x="855" y="305" width="270" height="70" rx="13" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="990" y="347" text-anchor="middle" class="node-title">Secret manager</text>
+  <rect x="855" y="405" width="270" height="70" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="990" y="447" text-anchor="middle" class="node-title">Cloud and enterprise APIs</text>
+  <rect x="855" y="505" width="270" height="70" rx="13" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="990" y="547" text-anchor="middle" class="node-title">Logs, metrics, and alerts</text>
+  <path d="M855 240 H745 V347 M855 340 H745 V347 M855 440 H745 V347 M735 647 H795 V540 H845" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1205" y="125" width="350" height="570" rx="20" fill="#ffffff" stroke="#c55a11" stroke-width="3"/><text x="1380" y="160" text-anchor="middle" class="group">Managed target plane</text>
+  <rect x="1245" y="205" width="270" height="60" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="1380" y="242" text-anchor="middle" class="node-title">Linux hosts</text>
+  <rect x="1245" y="295" width="270" height="60" rx="13" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="1380" y="332" text-anchor="middle" class="node-title">Windows hosts</text>
+  <rect x="1245" y="385" width="270" height="60" rx="13" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="1380" y="422" text-anchor="middle" class="node-title">Network and security devices</text>
+  <rect x="1245" y="475" width="270" height="60" rx="13" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="1380" y="512" text-anchor="middle" class="node-title">Cloud resources and services</text>
+  <rect x="1245" y="565" width="270" height="60" rx="13" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="1380" y="602" text-anchor="middle" class="node-title">Applications and middleware</text>
+  <path d="M735 347 H795 V235 H1195 M735 347 H795 V325 H1195 M735 347 H795 V415 H1195 M735 347 H795 V505 H1195 M735 347 H795 V595 H1195" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1125 540 H1175 V540 H1380 V635" fill="none" stroke="#c55a11" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+  <rect x="290" y="745" width="1020" height="42" rx="21" fill="#ffffff" stroke="#b8c7d9"/><text x="800" y="772" text-anchor="middle" class="label">Every execution should be attributable, policy-controlled, secret-safe, and observable across target boundaries</text>
+</svg>

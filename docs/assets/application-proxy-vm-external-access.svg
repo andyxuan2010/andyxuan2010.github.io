@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">External access patterns for VM-hosted web applications in Azure and AWS</title>
+  <desc id="desc">Two side-by-side architecture panels. Azure uses Microsoft Entra application proxy and outbound-only Windows connector virtual machines to reach a private Azure application virtual machine. AWS uses Route 53, optional CloudFront and WAF, an HTTPS Application Load Balancer with OIDC or Cognito authentication, and a private EC2 instance. Both backends have no public IP.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0078d4"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c55a11"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#657184"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #172033; }
+      .panel-title { font: 700 23px Arial, sans-serif; }
+      .node-title { font: 700 17px Arial, sans-serif; fill: #172033; }
+      .node-text { font: 15px Arial, sans-serif; fill: #344054; }
+      .small { font: 14px Arial, sans-serif; fill: #475467; }
+      .tiny { font: 12px Arial, sans-serif; fill: #475467; }
+      .arrow-label { font: 600 13px Arial, sans-serif; fill: #475467; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7f9fc"/>
+  <text x="800" y="45" text-anchor="middle" class="title">Identity-aware external access to VM-hosted web applications</text>
+  <text x="800" y="70" text-anchor="middle" class="small">Public entry point, explicit identity policy, private backend, and observable traffic path</text>
+
+  <!-- Azure panel -->
+  <rect x="35" y="95" width="745" height="765" rx="18" fill="#ffffff" stroke="#b8d8f2" stroke-width="2"/>
+  <rect x="35" y="95" width="745" height="58" rx="18" fill="#eaf5ff"/>
+  <rect x="35" y="135" width="745" height="18" fill="#eaf5ff"/>
+  <text x="62" y="132" class="panel-title" fill="#0078d4">Azure: Microsoft Entra application proxy</text>
+  <text x="62" y="178" class="small">Best fit: assigned users or partners, SSO, MFA, and no inbound path to the VNet</text>
+
+  <rect x="70" y="215" width="155" height="72" rx="10" fill="#f2f4f7" stroke="#98a2b3"/>
+  <text x="147" y="245" text-anchor="middle" class="node-title">External user</text>
+  <text x="147" y="267" text-anchor="middle" class="node-text">Browser / client</text>
+
+  <rect x="270" y="215" width="155" height="72" rx="10" fill="#f2f4f7" stroke="#98a2b3"/>
+  <text x="347" y="245" text-anchor="middle" class="node-title">Public DNS</text>
+  <text x="347" y="267" text-anchor="middle" class="node-text">Custom URL + HTTPS</text>
+
+  <rect x="470" y="215" width="240" height="72" rx="10" fill="#eaf5ff" stroke="#0078d4" stroke-width="2"/>
+  <text x="590" y="242" text-anchor="middle" class="node-title">Microsoft Entra ID</text>
+  <text x="590" y="264" text-anchor="middle" class="node-text">Pre-auth + Conditional Access</text>
+
+  <line x1="225" y1="251" x2="270" y2="251" stroke="#0078d4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="425" y1="251" x2="470" y2="251" stroke="#0078d4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="347" y="207" text-anchor="middle" class="arrow-label">HTTPS</text>
+
+  <rect x="95" y="350" width="285" height="92" rx="10" fill="#eaf5ff" stroke="#0078d4" stroke-width="2"/>
+  <text x="237" y="382" text-anchor="middle" class="node-title">Application Proxy service</text>
+  <text x="237" y="405" text-anchor="middle" class="node-text">Microsoft-managed public endpoint</text>
+  <text x="237" y="425" text-anchor="middle" class="node-text">msappproxy.net or custom domain</text>
+
+  <rect x="425" y="335" width="310" height="122" rx="10" fill="#eef8f1" stroke="#2e8b57" stroke-width="2"/>
+  <text x="580" y="367" text-anchor="middle" class="node-title">Connector group</text>
+  <text x="580" y="391" text-anchor="middle" class="node-text">2+ Windows Server VMs</text>
+  <text x="580" y="414" text-anchor="middle" class="node-text">Private subnet, outbound 80/443</text>
+  <text x="580" y="437" text-anchor="middle" class="node-text">No inbound internet listener</text>
+
+  <line x1="590" y1="287" x2="237" y2="350" stroke="#0078d4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="380" y1="396" x2="425" y2="396" stroke="#2e8b57" stroke-width="3" marker-end="url(#arrow-gray)"/>
+  <text x="403" y="382" text-anchor="middle" class="arrow-label">outbound pull</text>
+
+  <rect x="105" y="520" width="625" height="135" rx="14" fill="#f8fbff" stroke="#8fb9db" stroke-dasharray="7 5" stroke-width="2"/>
+  <text x="125" y="550" class="node-title" fill="#0078d4">Azure VNet: private workload boundary</text>
+  <rect x="145" y="570" width="250" height="62" rx="9" fill="#ffffff" stroke="#0078d4"/>
+  <text x="270" y="596" text-anchor="middle" class="node-title">Application VM</text>
+  <text x="270" y="618" text-anchor="middle" class="node-text">Private IP, app on 443 / 8080</text>
+  <rect x="440" y="570" width="250" height="62" rx="9" fill="#ffffff" stroke="#98a2b3"/>
+  <text x="565" y="596" text-anchor="middle" class="node-title">NSG + private DNS</text>
+  <text x="565" y="618" text-anchor="middle" class="node-text">Allow only connector path</text>
+  <line x1="580" y1="457" x2="395" y2="570" stroke="#2e8b57" stroke-width="3" marker-end="url(#arrow-gray)"/>
+  <text x="484" y="518" text-anchor="middle" class="arrow-label">private HTTP/S</text>
+
+  <rect x="95" y="700" width="640" height="106" rx="10" fill="#fff8e8" stroke="#d99a00"/>
+  <text x="115" y="730" class="node-title">Controls and evidence</text>
+  <text x="115" y="754" class="node-text">No public IP on app or connector VMs | Bastion / JIT for administration</text>
+  <text x="115" y="777" class="node-text">Entra sign-in + audit logs | connector health | VM / app / NSG telemetry</text>
+
+  <!-- AWS panel -->
+  <rect x="820" y="95" width="745" height="765" rx="18" fill="#ffffff" stroke="#f0c49d" stroke-width="2"/>
+  <rect x="820" y="95" width="745" height="58" rx="18" fill="#fff3e8"/>
+  <rect x="820" y="135" width="745" height="18" fill="#fff3e8"/>
+  <text x="847" y="132" class="panel-title" fill="#c55a11">AWS: ALB identity gate or Verified Access</text>
+  <text x="847" y="178" class="small">Best fit: public web access with OIDC/Cognito, or identity-aware access to a private ALB</text>
+
+  <rect x="855" y="215" width="155" height="72" rx="10" fill="#f2f4f7" stroke="#98a2b3"/>
+  <text x="932" y="245" text-anchor="middle" class="node-title">External user</text>
+  <text x="932" y="267" text-anchor="middle" class="node-text">Browser / client</text>
+
+  <rect x="1055" y="215" width="165" height="72" rx="10" fill="#f2f4f7" stroke="#98a2b3"/>
+  <text x="1137" y="245" text-anchor="middle" class="node-title">Route 53</text>
+  <text x="1137" y="267" text-anchor="middle" class="node-text">Alias + HTTPS</text>
+
+  <rect x="1265" y="215" width="250" height="72" rx="10" fill="#fff3e8" stroke="#c55a11" stroke-width="2"/>
+  <text x="1390" y="242" text-anchor="middle" class="node-title">CloudFront + WAF</text>
+  <text x="1390" y="264" text-anchor="middle" class="node-text">Optional global edge</text>
+
+  <line x1="1010" y1="251" x2="1055" y2="251" stroke="#c55a11" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <line x1="1220" y1="251" x2="1265" y2="251" stroke="#c55a11" stroke-width="3" marker-end="url(#arrow-orange)"/>
+
+  <rect x="890" y="350" width="300" height="92" rx="10" fill="#fff3e8" stroke="#c55a11" stroke-width="2"/>
+  <text x="1040" y="382" text-anchor="middle" class="node-title">Public ALB HTTPS listener</text>
+  <text x="1040" y="405" text-anchor="middle" class="node-text">Authenticate OIDC / Cognito</text>
+  <text x="1040" y="425" text-anchor="middle" class="node-text">Then forward to target group</text>
+
+  <rect x="1240" y="350" width="270" height="92" rx="10" fill="#f0f8ff" stroke="#527da3" stroke-width="2"/>
+  <text x="1375" y="382" text-anchor="middle" class="node-title">IdP / Cognito</text>
+  <text x="1375" y="405" text-anchor="middle" class="node-text">OIDC authorization</text>
+  <text x="1375" y="425" text-anchor="middle" class="node-text">Callback URI is exact</text>
+
+  <line x1="1390" y1="287" x2="1040" y2="350" stroke="#c55a11" stroke-width="3" marker-end="url(#arrow-orange)"/>
+  <line x1="1190" y1="396" x2="1240" y2="396" stroke="#527da3" stroke-width="3" marker-end="url(#arrow-gray)"/>
+
+  <rect x="905" y="520" width="585" height="135" rx="14" fill="#fffaf6" stroke="#e0a36e" stroke-dasharray="7 5" stroke-width="2"/>
+  <text x="925" y="550" class="node-title" fill="#c55a11">AWS VPC: private workload boundary</text>
+  <rect x="945" y="570" width="250" height="62" rx="9" fill="#ffffff" stroke="#c55a11"/>
+  <text x="1070" y="596" text-anchor="middle" class="node-title">Private EC2 VM</text>
+  <text x="1070" y="618" text-anchor="middle" class="node-text">Private IP, app on 443 / 8080</text>
+  <rect x="1240" y="570" width="210" height="62" rx="9" fill="#ffffff" stroke="#98a2b3"/>
+  <text x="1345" y="596" text-anchor="middle" class="node-title">Target SG</text>
+  <text x="1345" y="618" text-anchor="middle" class="node-text">Ingress from ALB SG</text>
+  <line x1="1040" y1="442" x2="1070" y2="570" stroke="#c55a11" stroke-width="3" marker-end="url(#arrow-gray)"/>
+  <text x="1087" y="512" text-anchor="middle" class="arrow-label">private HTTP/S</text>
+
+  <rect x="905" y="685" width="585" height="62" rx="10" fill="#f0f8ff" stroke="#527da3"/>
+  <text x="925" y="712" class="node-title">Private identity alternative</text>
+  <text x="925" y="734" class="node-text">AWS Verified Access endpoint -> internal ALB -> private EC2; trust provider + policy per request</text>
+
+  <rect x="905" y="770" width="585" height="36" rx="8" fill="#fff8e8" stroke="#d99a00"/>
+  <text x="925" y="793" class="node-text">WAF / ALB / Verified Access logs | CloudTrail | CloudWatch | VPC Flow Logs</text>
+
+  <text x="800" y="880" text-anchor="middle" class="tiny">The backend application remains private; choose the edge pattern by audience, protocol, scale, and identity requirements.</text>
+</svg>
