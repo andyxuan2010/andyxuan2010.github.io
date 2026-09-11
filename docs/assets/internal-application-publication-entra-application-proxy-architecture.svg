@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Internal application publication architecture with Microsoft Entra Application Proxy</title>
+  <desc id="desc">A remote user reaches a published web application URL and authenticates with Microsoft Entra ID. Conditional Access and MFA are evaluated before the Application Proxy service routes the request to an available private network connector through outbound-only connections. The connector reaches a private legacy web application and can use Kerberos constrained delegation for Integrated Windows Authentication. The application remains responsible for authorization, while DNS, certificates, identity, networking, monitoring, and backend controls govern the path.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <marker id="identity-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#2878c8"/></marker>
+    <marker id="private-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#d99a00"/></marker>
+    <marker id="control-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#7654c5"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}
+      .subtitle{font:400 17px Arial,sans-serif;fill:#52667f}
+      .boundary-title{font:700 21px Arial,sans-serif;fill:#15253d}
+      .node-title{font:700 18px Arial,sans-serif;fill:#15253d}
+      .node-text{font:400 15px Arial,sans-serif;fill:#52667f}
+      .label{font:700 14px Arial,sans-serif;fill:#52667f}
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f7f9fc"/>
+  <text x="900" y="48" text-anchor="middle" class="title">Internal application publication with Microsoft Entra Application Proxy</text>
+  <text x="900" y="78" text-anchor="middle" class="subtitle">Identity-aware remote web access · outbound-only connectors · private backend</text>
+
+  <rect x="45" y="112" width="350" height="82" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="220" y="147" text-anchor="middle" class="node-title">Microsoft Entra ID</text>
+  <text x="220" y="173" text-anchor="middle" class="node-text">Preauthentication, SSO, assignment, and sign-in</text>
+  <rect x="425" y="112" width="350" height="82" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="600" y="147" text-anchor="middle" class="node-title">Conditional Access and MFA</text>
+  <text x="600" y="173" text-anchor="middle" class="node-text">Risk, device, location, strength, and session policy</text>
+  <rect x="805" y="112" width="350" height="82" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="980" y="147" text-anchor="middle" class="node-title">Identity and operations monitoring</text>
+  <text x="980" y="173" text-anchor="middle" class="node-text">Sign-ins, proxy requests, connector, and backend health</text>
+  <rect x="1185" y="112" width="570" height="82" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1470" y="147" text-anchor="middle" class="node-title">DNS, certificates, and private network controls</text>
+  <text x="1470" y="173" text-anchor="middle" class="node-text">External hostname, private DNS, egress, TLS, firewall, and routing</text>
+
+  <text x="45" y="238" class="boundary-title">Remote user</text>
+  <rect x="45" y="315" width="275" height="145" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="182" y="354" text-anchor="middle" class="node-title">Browser or approved client</text>
+  <text x="182" y="381" text-anchor="middle" class="node-text">Published HTTPS application URL</text>
+  <text x="182" y="404" text-anchor="middle" class="node-text">Named workforce, partner, or guest user</text>
+  <text x="182" y="427" text-anchor="middle" class="node-text">No direct route to the private network</text>
+
+  <rect x="470" y="220" width="740" height="540" rx="22" fill="#ffffff" stroke="#7654c5" stroke-width="3"/>
+  <text x="505" y="260" class="boundary-title">Microsoft Entra Application Proxy boundary</text>
+  <text x="505" y="286" class="node-text">User-to-web-application access, not general network or arbitrary machine integration</text>
+  <rect x="505" y="315" width="310" height="145" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="660" y="354" text-anchor="middle" class="node-title">Application Proxy service</text>
+  <text x="660" y="381" text-anchor="middle" class="node-text">External endpoint and session termination</text>
+  <text x="660" y="404" text-anchor="middle" class="node-text">Authenticated request forwarding</text>
+  <text x="660" y="427" text-anchor="middle" class="node-text">Application assignment and connector selection</text>
+  <rect x="855" y="315" width="310" height="145" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1010" y="354" text-anchor="middle" class="node-title">Private network connector group</text>
+  <text x="1010" y="381" text-anchor="middle" class="node-text">Two or more Windows Server connectors</text>
+  <text x="1010" y="404" text-anchor="middle" class="node-text">Outbound-only cloud connections</text>
+  <text x="1010" y="427" text-anchor="middle" class="node-text">Health, patching, capacity, and failover</text>
+  <rect x="505" y="515" width="310" height="120" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="660" y="553" text-anchor="middle" class="node-title">SSO and policy boundary</text>
+  <text x="660" y="580" text-anchor="middle" class="node-text">MFA, risk, device, location, and session</text>
+  <text x="660" y="603" text-anchor="middle" class="node-text">Assignment, claims, headers, and audit</text>
+  <rect x="855" y="515" width="310" height="120" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1010" y="553" text-anchor="middle" class="node-title">Private access path</text>
+  <text x="1010" y="580" text-anchor="middle" class="node-text">DNS, firewall, routing, TLS, and backend port</text>
+  <text x="1010" y="603" text-anchor="middle" class="node-text">Private application and domain dependencies</text>
+  <rect x="600" y="680" width="480" height="52" rx="26" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="840" y="713" text-anchor="middle" class="label">Application Proxy authenticates and forwards; the app authorizes and processes</text>
+
+  <text x="1300" y="238" class="boundary-title">Private application and identity dependencies</text>
+  <rect x="1300" y="260" width="455" height="92" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="1527" y="296" text-anchor="middle" class="node-title">Legacy web application</text>
+  <text x="1527" y="322" text-anchor="middle" class="node-text">Private HTTP or HTTPS backend and app roles</text>
+  <rect x="1300" y="382" width="455" height="92" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="1527" y="418" text-anchor="middle" class="node-title">Active Directory and KCD</text>
+  <text x="1527" y="444" text-anchor="middle" class="node-text">SPN, domain trust, delegation, and IWA SSO</text>
+  <rect x="1300" y="504" width="455" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1527" y="540" text-anchor="middle" class="node-title">Private DNS and network controls</text>
+  <text x="1527" y="566" text-anchor="middle" class="node-text">Internal load balancer, firewall, route, and TLS</text>
+  <rect x="1300" y="626" width="455" height="92" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1527" y="662" text-anchor="middle" class="node-title">Application authorization</text>
+  <text x="1527" y="688" text-anchor="middle" class="node-text">Roles, tenant scope, data access, and audit</text>
+
+  <path d="M320 387 H455" stroke="#2878c8" stroke-width="5" fill="none" marker-end="url(#identity-arrow)"/>
+  <path d="M815 387 H845" stroke="#2878c8" stroke-width="5" fill="none" marker-end="url(#identity-arrow)"/>
+  <path d="M1165 387 H1280" stroke="#d99a00" stroke-width="5" fill="none" marker-end="url(#private-arrow)"/>
+  <path d="M1165 387 H1235 V428 H1280" stroke="#d99a00" stroke-width="5" fill="none" marker-end="url(#private-arrow)"/>
+  <path d="M1165 387 H1235 V550 H1280" stroke="#d99a00" stroke-width="5" fill="none" marker-end="url(#private-arrow)"/>
+  <path d="M1165 387 H1235 V672 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M220 194 V215 H660 V305" stroke="#2878c8" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M600 194 V215 H660 V505" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M980 194 V215 H1010 V505" stroke="#16849a" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M1470 194 V215 H1110 V505" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+
+  <text x="390" y="378" text-anchor="middle" class="label">authenticated request</text>
+  <text x="1215" y="372" text-anchor="middle" class="label">private backend</text>
+  <text x="1215" y="660" text-anchor="middle" class="label">app authorization</text>
+  <text x="900" y="850" text-anchor="middle" class="label">Use Application Proxy for named users and web apps · Use API or private access services for other boundaries</text>
+</svg>

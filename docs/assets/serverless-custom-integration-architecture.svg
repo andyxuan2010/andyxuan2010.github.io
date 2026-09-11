@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Serverless custom integration architecture with Azure Functions</title>
+  <desc id="desc">HTTP, Service Bus, Event Grid, timer, and storage triggers invoke Azure Functions hosted on Flex Consumption. The function validates, transforms, adapts, or executes bounded custom code before sending results to durable messaging, Logic Apps, APIs, data services, or event notifications. Identity, private networking, deployment, and monitoring govern the function app.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <marker id="control-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#7654c5"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}
+      .subtitle{font:400 17px Arial,sans-serif;fill:#52667f}
+      .boundary-title{font:700 21px Arial,sans-serif;fill:#15253d}
+      .node-title{font:700 18px Arial,sans-serif;fill:#15253d}
+      .node-text{font:400 15px Arial,sans-serif;fill:#52667f}
+      .label{font:700 14px Arial,sans-serif;fill:#52667f}
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f7f9fc"/>
+  <text x="900" y="48" text-anchor="middle" class="title">Serverless custom integration with Azure Functions</text>
+  <text x="900" y="78" text-anchor="middle" class="subtitle">Use code for bounded integration work while durable messaging and workflow remain in their own services</text>
+
+  <rect x="45" y="112" width="350" height="82" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="220" y="147" text-anchor="middle" class="node-title">Microsoft Entra ID and Key Vault</text>
+  <text x="220" y="173" text-anchor="middle" class="node-text">Runtime identity, secrets, and certificates</text>
+  <rect x="425" y="112" width="350" height="82" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="600" y="147" text-anchor="middle" class="node-title">CI/CD and IaC</text>
+  <text x="600" y="173" text-anchor="middle" class="node-text">Tests, artifacts, configuration, and rollback</text>
+  <rect x="805" y="112" width="350" height="82" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="980" y="147" text-anchor="middle" class="node-title">Azure Monitor and Application Insights</text>
+  <text x="980" y="173" text-anchor="middle" class="node-text">Invocations, dependencies, failures, and scale</text>
+  <rect x="1185" y="112" width="570" height="82" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1470" y="147" text-anchor="middle" class="node-title">Virtual network and private dependencies</text>
+  <text x="1470" y="173" text-anchor="middle" class="node-text">Private endpoints, DNS, egress, and TLS</text>
+
+  <text x="45" y="238" class="boundary-title">Triggers and inputs</text>
+  <rect x="45" y="260" width="275" height="92" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="182" y="296" text-anchor="middle" class="node-title">HTTP and webhooks</text>
+  <text x="182" y="322" text-anchor="middle" class="node-text">APIM-governed lightweight APIs</text>
+  <rect x="45" y="382" width="275" height="92" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="182" y="418" text-anchor="middle" class="node-title">Service Bus</text>
+  <text x="182" y="444" text-anchor="middle" class="node-text">Durable business messages</text>
+  <rect x="45" y="504" width="275" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="182" y="540" text-anchor="middle" class="node-title">Event Grid</text>
+  <text x="182" y="566" text-anchor="middle" class="node-text">Notifications and state changes</text>
+  <rect x="45" y="626" width="275" height="92" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="182" y="662" text-anchor="middle" class="node-title">Timer and storage triggers</text>
+  <text x="182" y="688" text-anchor="middle" class="node-text">Schedules, files, and changes</text>
+
+  <rect x="470" y="220" width="740" height="540" rx="22" fill="#ffffff" stroke="#7654c5" stroke-width="3"/>
+  <text x="505" y="260" class="boundary-title">Azure Functions app</text>
+  <text x="505" y="286" class="node-text">Flex Consumption by default for new serverless applications</text>
+  <rect x="505" y="315" width="310" height="145" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="660" y="354" text-anchor="middle" class="node-title">Triggers and bindings</text>
+  <text x="660" y="381" text-anchor="middle" class="node-text">Input and output adapters</text>
+  <text x="660" y="404" text-anchor="middle" class="node-text">Contract and metadata handling</text>
+  <text x="660" y="427" text-anchor="middle" class="node-text">Retry and checkpoint boundary</text>
+  <rect x="855" y="315" width="310" height="145" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="1010" y="354" text-anchor="middle" class="node-title">Custom code</text>
+  <text x="1010" y="381" text-anchor="middle" class="node-text">Validate and transform</text>
+  <text x="1010" y="404" text-anchor="middle" class="node-text">Protocol adapter and business step</text>
+  <text x="1010" y="427" text-anchor="middle" class="node-text">Bounded stateless execution</text>
+  <rect x="505" y="515" width="310" height="120" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="660" y="553" text-anchor="middle" class="node-title">Reliability controls</text>
+  <text x="660" y="580" text-anchor="middle" class="node-text">Idempotency · backoff · limits</text>
+  <text x="660" y="603" text-anchor="middle" class="node-text">Poison input · replay · recovery</text>
+  <rect x="855" y="515" width="310" height="120" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1010" y="553" text-anchor="middle" class="node-title">Execution boundary</text>
+  <text x="1010" y="580" text-anchor="middle" class="node-text">Timeout · concurrency · memory</text>
+  <text x="1010" y="603" text-anchor="middle" class="node-text">Scale · dependency pressure</text>
+  <rect x="600" y="680" width="480" height="52" rx="26" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="840" y="713" text-anchor="middle" class="label">Functions executes code; it does not replace broker or workflow durability</text>
+
+  <text x="1300" y="238" class="boundary-title">Outputs and dependencies</text>
+  <rect x="1300" y="260" width="455" height="92" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="1527" y="296" text-anchor="middle" class="node-title">Service Bus</text>
+  <text x="1527" y="322" text-anchor="middle" class="node-text">Durable output messages and work queues</text>
+  <rect x="1300" y="382" width="455" height="92" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1527" y="418" text-anchor="middle" class="node-title">Logic Apps</text>
+  <text x="1527" y="444" text-anchor="middle" class="node-text">Connector-heavy workflow orchestration</text>
+  <rect x="1300" y="504" width="455" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1527" y="540" text-anchor="middle" class="node-title">APIs, data, and protocol targets</text>
+  <text x="1527" y="566" text-anchor="middle" class="node-text">Approved private or public dependencies</text>
+  <rect x="1300" y="626" width="455" height="92" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1527" y="662" text-anchor="middle" class="node-title">Event notifications</text>
+  <text x="1527" y="688" text-anchor="middle" class="node-text">Bounded reactions and status signals</text>
+
+  <path d="M320 306 H455" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 428 H455 V390 H490" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 550 H455 V390 H490" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 672 H455 V390 H490" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M815 387 H845" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V428 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V550 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V672 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M220 194 V215 H660 V305" stroke="#2878c8" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M600 194 V215 H1010 V305" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M980 194 V215 H1010 V505" stroke="#16849a" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1470 194 V215 H1110 V505" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="390" y="298" text-anchor="middle" class="label">trigger</text>
+  <text x="1215" y="372" text-anchor="middle" class="label">bounded result</text>
+  <text x="900" y="850" text-anchor="middle" class="label">Use Service Bus for durable messages · Use Logic Apps for connector-heavy workflows · Use Functions for code</text>
+</svg>

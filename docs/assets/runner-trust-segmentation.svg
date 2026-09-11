@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">Self-hosted runner trust segmentation</title>
+  <desc id="desc">Runner groups progress from untrusted pull requests through trusted CI and deployment pools to production deployment and dedicated security signing.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 18px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="560" fill="#f7f9fc"/>
+  <text x="800" y="52" text-anchor="middle" class="title">Self-hosted runner trust segmentation</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Separate pools by trust level; do not let untrusted workflow authors select privileged runners</text>
+  <path d="M150 390 H1450" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="800" y="445" text-anchor="middle" class="label">Increasing trust, isolation, and control</text>
+  <rect x="55" y="155" width="250" height="150" rx="16" fill="#fff0ef" stroke="#c64b4b" stroke-width="3"/><text x="180" y="210" text-anchor="middle" class="node-title">Untrusted PR</text><text x="180" y="242" text-anchor="middle" class="node-text">Hosted runner</text><text x="180" y="267" text-anchor="middle" class="node-text">No secrets</text>
+  <rect x="355" y="155" width="250" height="150" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="480" y="210" text-anchor="middle" class="node-title">Trusted CI</text><text x="480" y="242" text-anchor="middle" class="node-text">Read-only dependencies</text><text x="480" y="267" text-anchor="middle" class="node-text">Isolated build</text>
+  <rect x="655" y="155" width="250" height="150" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="780" y="210" text-anchor="middle" class="node-title">Non-production deploy</text><text x="780" y="242" text-anchor="middle" class="node-text">Ephemeral runner</text><text x="780" y="267" text-anchor="middle" class="node-text">Environment-scoped identity</text>
+  <rect x="955" y="155" width="250" height="150" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="1080" y="210" text-anchor="middle" class="node-title">Production deploy</text><text x="1080" y="242" text-anchor="middle" class="node-text">Protected group</text><text x="1080" y="267" text-anchor="middle" class="node-text">Short-lived identity</text>
+  <rect x="1255" y="155" width="290" height="150" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="1400" y="210" text-anchor="middle" class="node-title">Security signing</text><text x="1400" y="242" text-anchor="middle" class="node-text">Dedicated isolation</text><text x="1400" y="267" text-anchor="middle" class="node-text">Hardware-backed or keyless</text>
+</svg>

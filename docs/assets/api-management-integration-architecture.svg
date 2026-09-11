@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 980" role="img" aria-labelledby="title desc">
+  <title id="title">API-led integration with Azure API Management</title>
+  <desc id="desc">Internal, partner, and public consumers reach Azure API Management through an optional web application firewall. The managed and self-hosted gateways apply API policies before routing to Azure, on-premises, Kubernetes, other-cloud, and integration backends. The Azure management plane provides products, portal, discovery, and policy control.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <marker id="control-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#7654c5"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}
+      .subtitle{font:400 17px Arial,sans-serif;fill:#52667f}
+      .boundary-title{font:700 21px Arial,sans-serif;fill:#15253d}
+      .node-title{font:700 18px Arial,sans-serif;fill:#15253d}
+      .node-text{font:400 15px Arial,sans-serif;fill:#52667f}
+      .label{font:700 14px Arial,sans-serif;fill:#52667f}
+    </style>
+  </defs>
+
+  <rect width="1800" height="980" fill="#f7f9fc"/>
+  <text x="900" y="48" text-anchor="middle" class="title">API-led integration with Azure API Management</text>
+  <text x="900" y="78" text-anchor="middle" class="subtitle">One governed API front door for internal, partner, public, and hybrid backends</text>
+
+  <rect x="45" y="112" width="380" height="92" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="235" y="148" text-anchor="middle" class="node-title">Microsoft Entra ID</text>
+  <text x="235" y="174" text-anchor="middle" class="node-text">OAuth, OpenID Connect, JWT validation</text>
+  <rect x="470" y="112" width="380" height="92" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="660" y="148" text-anchor="middle" class="node-title">Key Vault</text>
+  <text x="660" y="174" text-anchor="middle" class="node-text">Certificates, secrets, backend credentials</text>
+  <rect x="895" y="112" width="380" height="92" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1085" y="148" text-anchor="middle" class="node-title">API Center inventory</text>
+  <text x="1085" y="174" text-anchor="middle" class="node-text">Organization-wide API discovery and ownership</text>
+  <rect x="1320" y="112" width="435" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1537" y="148" text-anchor="middle" class="node-title">Azure Monitor and Application Insights</text>
+  <text x="1537" y="174" text-anchor="middle" class="node-text">Logs, metrics, traces, alerts, and usage</text>
+
+  <text x="45" y="246" class="boundary-title">API consumers</text>
+  <rect x="45" y="270" width="245" height="98" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="167" y="307" text-anchor="middle" class="node-title">Internal applications</text>
+  <text x="167" y="334" text-anchor="middle" class="node-text">Employees and workloads</text>
+  <rect x="45" y="402" width="245" height="98" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="167" y="439" text-anchor="middle" class="node-title">Partner applications</text>
+  <text x="167" y="466" text-anchor="middle" class="node-text">Federated and contracted access</text>
+  <rect x="45" y="534" width="245" height="98" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="167" y="571" text-anchor="middle" class="node-title">Public applications</text>
+  <text x="167" y="598" text-anchor="middle" class="node-text">Published API products</text>
+  <rect x="335" y="404" width="210" height="98" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="440" y="441" text-anchor="middle" class="node-title">Optional edge</text>
+  <text x="440" y="468" text-anchor="middle" class="node-text">Front Door or Application</text>
+  <text x="440" y="488" text-anchor="middle" class="node-text">Gateway with WAF</text>
+
+  <rect x="590" y="230" width="615" height="600" rx="22" fill="#ffffff" stroke="#7654c5" stroke-width="3"/>
+  <text x="620" y="270" class="boundary-title">Azure API Management</text>
+  <text x="620" y="296" class="node-text">Managed control plane with governed data planes</text>
+  <rect x="620" y="320" width="260" height="94" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="750" y="357" text-anchor="middle" class="node-title">Management plane</text>
+  <text x="750" y="384" text-anchor="middle" class="node-text">API definitions and policies</text>
+  <rect x="915" y="320" width="260" height="94" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1045" y="357" text-anchor="middle" class="node-title">Developer portal</text>
+  <text x="1045" y="384" text-anchor="middle" class="node-text">Products, docs, onboarding</text>
+  <rect x="620" y="470" width="555" height="112" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="897" y="510" text-anchor="middle" class="node-title">Managed API gateway</text>
+  <text x="897" y="537" text-anchor="middle" class="node-text">JWT validation · rate limits · quotas · cache · transforms</text>
+  <text x="897" y="559" text-anchor="middle" class="node-text">Routing · correlation · telemetry · backend protection</text>
+  <rect x="620" y="650" width="555" height="112" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="897" y="690" text-anchor="middle" class="node-title">Self-hosted gateway</text>
+  <text x="897" y="717" text-anchor="middle" class="node-text">Linux container near on-premises or cloud APIs</text>
+  <text x="897" y="739" text-anchor="middle" class="node-text">Azure management and policy governance retained</text>
+
+  <text x="1290" y="246" class="boundary-title">Backend systems</text>
+  <rect x="1290" y="270" width="465" height="98" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1522" y="307" text-anchor="middle" class="node-title">Azure APIs and services</text>
+  <text x="1522" y="334" text-anchor="middle" class="node-text">App Service, Functions, data, and platform APIs</text>
+  <rect x="1290" y="402" width="465" height="98" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1522" y="439" text-anchor="middle" class="node-title">Integration and domain runtimes</text>
+  <text x="1522" y="466" text-anchor="middle" class="node-text">Logic Apps, Functions, containers, and workflows</text>
+  <rect x="1290" y="534" width="465" height="98" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1522" y="571" text-anchor="middle" class="node-title">On-premises and legacy APIs</text>
+  <text x="1522" y="598" text-anchor="middle" class="node-text">Datacenter systems through private connectivity</text>
+  <rect x="1290" y="666" width="465" height="98" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="1522" y="703" text-anchor="middle" class="node-title">Kubernetes and other-cloud APIs</text>
+  <text x="1522" y="730" text-anchor="middle" class="node-text">Local gateway placement for latency and locality</text>
+
+  <path d="M290 319 H575" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M290 451 H325" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M290 583 H325" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M545 453 H575" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M545 453 H560 V526 H610" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M880 367 H905" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M750 414 V460" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M750 414 V620 H890 V640" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M1175 526 H1260" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1175 526 H1235 V451 H1260" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1175 706 H1260" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1175 706 H1235 V583 H1260" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M235 204 V250 H750 V310" stroke="#2878c8" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M660 204 V300 H750 V310" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1085 204 V300 H1045 V310" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M1537 204 V250 H1120 V460" stroke="#16849a" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="280" y="875" width="1240" height="58" rx="29" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="900" y="911" text-anchor="middle" class="label">Keep domain logic in backends · Keep API policy, identity, quota, cache, transformation, and telemetry at the gateway</text>
+  <text x="515" y="426" text-anchor="middle" class="label">Optional public path</text>
+  <text x="1270" y="510" text-anchor="end" class="label">Governed routing</text>
+  <text x="1270" y="692" text-anchor="end" class="label">Local data plane</text>
+</svg>
