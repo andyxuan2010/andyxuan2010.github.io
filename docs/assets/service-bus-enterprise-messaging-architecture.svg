@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise messaging architecture with Azure Service Bus</title>
+  <desc id="desc">Business producers send purchase orders, payment instructions, provisioning requests, and inventory updates to Azure Service Bus queues or topics. Queues feed competing consumers, topics fan out to subscriptions, and failed messages move to dead-letter queues. Identity, private networking, monitoring, sessions, duplicate detection, scheduling, and transactions govern the broker.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <marker id="control-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#7654c5"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}
+      .subtitle{font:400 17px Arial,sans-serif;fill:#52667f}
+      .boundary-title{font:700 21px Arial,sans-serif;fill:#15253d}
+      .node-title{font:700 18px Arial,sans-serif;fill:#15253d}
+      .node-text{font:400 15px Arial,sans-serif;fill:#52667f}
+      .label{font:700 14px Arial,sans-serif;fill:#52667f}
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f7f9fc"/>
+  <text x="900" y="48" text-anchor="middle" class="title">Enterprise messaging with Azure Service Bus</text>
+  <text x="900" y="78" text-anchor="middle" class="subtitle">Durable business messages decouple producers from consumers and absorb failure and demand spikes</text>
+
+  <rect x="45" y="112" width="350" height="82" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="220" y="147" text-anchor="middle" class="node-title">Microsoft Entra ID and RBAC</text>
+  <text x="220" y="173" text-anchor="middle" class="node-text">Scoped send, receive, and manage access</text>
+  <rect x="425" y="112" width="350" height="82" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="600" y="147" text-anchor="middle" class="node-title">IaC and policy controls</text>
+  <text x="600" y="173" text-anchor="middle" class="node-text">Entities, contracts, retention, and lifecycle</text>
+  <rect x="805" y="112" width="350" height="82" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="980" y="147" text-anchor="middle" class="node-title">Azure Monitor</text>
+  <text x="980" y="173" text-anchor="middle" class="node-text">Backlog, age, DLQ, delivery, and errors</text>
+  <rect x="1185" y="112" width="570" height="82" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1470" y="147" text-anchor="middle" class="node-title">Private networking and encryption</text>
+  <text x="1470" y="173" text-anchor="middle" class="node-text">Private endpoints, DNS, TLS, keys, and diagnostics</text>
+
+  <text x="45" y="238" class="boundary-title">Business producers</text>
+  <rect x="45" y="260" width="275" height="98" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="182" y="297" text-anchor="middle" class="node-title">Purchase orders</text>
+  <text x="182" y="324" text-anchor="middle" class="node-text">Submit and fulfillment commands</text>
+  <rect x="45" y="390" width="275" height="98" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="182" y="427" text-anchor="middle" class="node-title">Payments and provisioning</text>
+  <text x="182" y="454" text-anchor="middle" class="node-text">High-value workflow requests</text>
+  <rect x="45" y="520" width="275" height="98" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="182" y="557" text-anchor="middle" class="node-title">Inventory and state changes</text>
+  <text x="182" y="584" text-anchor="middle" class="node-text">Business events and updates</text>
+
+  <rect x="470" y="220" width="740" height="540" rx="22" fill="#ffffff" stroke="#7654c5" stroke-width="3"/>
+  <text x="505" y="260" class="boundary-title">Azure Service Bus namespace</text>
+  <text x="505" y="286" class="node-text">Durable broker boundary for business messages</text>
+  <rect x="505" y="315" width="310" height="150" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="660" y="355" text-anchor="middle" class="node-title">Queues</text>
+  <text x="660" y="382" text-anchor="middle" class="node-text">Point-to-point work</text>
+  <text x="660" y="405" text-anchor="middle" class="node-text">Competing consumers</text>
+  <text x="660" y="428" text-anchor="middle" class="node-text">Load leveling and settlement</text>
+  <rect x="855" y="315" width="310" height="150" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="1010" y="355" text-anchor="middle" class="node-title">Topics and subscriptions</text>
+  <text x="1010" y="382" text-anchor="middle" class="node-text">Publish and subscribe fan-out</text>
+  <text x="1010" y="405" text-anchor="middle" class="node-text">Independent durable copies</text>
+  <text x="1010" y="428" text-anchor="middle" class="node-text">Filters and actions</text>
+  <rect x="505" y="520" width="310" height="120" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="660" y="558" text-anchor="middle" class="node-title">Dead-letter queues</text>
+  <text x="660" y="585" text-anchor="middle" class="node-text">Inspect, correct, replay,</text>
+  <text x="660" y="608" text-anchor="middle" class="node-text">quarantine, and reconcile</text>
+  <rect x="855" y="520" width="310" height="120" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1010" y="558" text-anchor="middle" class="node-title">Message controls</text>
+  <text x="1010" y="585" text-anchor="middle" class="node-text">Sessions · schedule · dedupe</text>
+  <text x="1010" y="608" text-anchor="middle" class="node-text">Transactions · retry policy</text>
+  <rect x="600" y="680" width="480" height="52" rx="26" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="840" y="713" text-anchor="middle" class="label">Idempotent consumers · correlation · schema version · audit</text>
+
+  <text x="1300" y="238" class="boundary-title">Business consumers</text>
+  <rect x="1300" y="260" width="455" height="98" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="1527" y="297" text-anchor="middle" class="node-title">Fulfillment and payment workers</text>
+  <text x="1527" y="324" text-anchor="middle" class="node-text">One consumer owns each queue message</text>
+  <rect x="1300" y="390" width="455" height="98" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="1527" y="427" text-anchor="middle" class="node-title">Inventory and finance subscribers</text>
+  <text x="1527" y="454" text-anchor="middle" class="node-text">Each subscription processes its own copy</text>
+  <rect x="1300" y="520" width="455" height="98" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1527" y="557" text-anchor="middle" class="node-title">Reconciliation and operations</text>
+  <text x="1527" y="584" text-anchor="middle" class="node-text">Alerting, replay, and business recovery</text>
+
+  <path d="M320 309 H455" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 439 H455 V390 H490" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 569 H455 V380 H845" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M815 390 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 390 H1240 V439 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 390 H1240 V569 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M660 465 V510" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1010 465 V510" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M220 194 V215 H660 V305" stroke="#2878c8" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M600 194 V215 H660 V305" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M980 194 V215 H1010 V305" stroke="#16849a" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1470 194 V215 H1100 V305" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="390" y="300" text-anchor="middle" class="label">send</text>
+  <text x="1200" y="378" text-anchor="middle" class="label">receive and settle</text>
+  <text x="1200" y="429" text-anchor="middle" class="label">fan-out</text>
+  <text x="900" y="850" text-anchor="middle" class="label">A broker absorbs temporary outages and workload spikes; it does not replace the system of record or business workflow runtime.</text>
+</svg>

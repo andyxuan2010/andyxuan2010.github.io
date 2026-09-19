@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+  <title id="title">Azure landing zone as a product architecture</title>
+  <desc id="desc">A Microsoft Entra tenant contains a tenant root group with platform, landing zone, sandbox, and decommissioned branches. Platform subscriptions provide identity, management, connectivity, and security services. Landing zones contain production and non-production workload subscriptions connected through a hub or Virtual WAN.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 18px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="780" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Azure landing zone as a product</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Organize policy and lifecycle boundaries around platform capabilities and workload environments</text>
+
+  <rect x="615" y="105" width="370" height="70" rx="15" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="800" y="147" text-anchor="middle" class="node-title">Microsoft Entra tenant</text>
+  <rect x="615" y="215" width="370" height="70" rx="15" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="800" y="257" text-anchor="middle" class="node-title">Tenant root management group</text>
+  <path d="M800 175 V205" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="55" y="335" width="280" height="78" rx="15" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="195" y="368" text-anchor="middle" class="node-title">Platform</text><text x="195" y="394" text-anchor="middle" class="node-text">Shared control plane</text>
+  <rect x="440" y="335" width="280" height="78" rx="15" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="580" y="368" text-anchor="middle" class="node-title">Landing zones</text><text x="580" y="394" text-anchor="middle" class="node-text">Workload policy boundary</text>
+  <rect x="825" y="335" width="280" height="78" rx="15" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="965" y="368" text-anchor="middle" class="node-title">Sandbox</text><text x="965" y="394" text-anchor="middle" class="node-text">Constrained experimentation</text>
+  <rect x="1210" y="335" width="280" height="78" rx="15" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="1350" y="368" text-anchor="middle" class="node-title">Decommissioned</text><text x="1350" y="394" text-anchor="middle" class="node-text">Retirement boundary</text>
+  <path d="M800 285 V310 H195 V325 M800 310 H580 V325 M800 310 H965 V325 M800 310 H1350 V325" fill="none" stroke="#52667f" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="35" y="475" width="180" height="78" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="125" y="508" text-anchor="middle" class="node-title">Identity</text><text x="125" y="534" text-anchor="middle" class="node-text">Subscription</text>
+  <rect x="235" y="475" width="180" height="78" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="325" y="508" text-anchor="middle" class="node-title">Management</text><text x="325" y="534" text-anchor="middle" class="node-text">Subscription</text>
+  <rect x="435" y="475" width="180" height="78" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="525" y="508" text-anchor="middle" class="node-title">Connectivity</text><text x="525" y="534" text-anchor="middle" class="node-text">Subscription</text>
+  <rect x="635" y="475" width="180" height="78" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="725" y="508" text-anchor="middle" class="node-title">Security</text><text x="725" y="534" text-anchor="middle" class="node-text">Subscription</text>
+  <path d="M195 413 V455 M195 455 H125 V465 M195 455 H325 V465 M195 455 H525 V465 M195 455 H725 V465" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="455" y="475" width="280" height="78" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3" opacity="0"/>
+  <rect x="850" y="475" width="280" height="78" rx="14" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="990" y="508" text-anchor="middle" class="node-title">Production management</text><text x="990" y="534" text-anchor="middle" class="node-text">Landing-zone branch</text>
+  <rect x="1170" y="475" width="280" height="78" rx="14" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="1310" y="508" text-anchor="middle" class="node-title">Non-production management</text><text x="1310" y="534" text-anchor="middle" class="node-text">Landing-zone branch</text>
+  <path d="M580 413 V455 H990 V465 M580 455 H1310 V465" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="880" y="620" width="230" height="78" rx="14" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="995" y="653" text-anchor="middle" class="node-title">Hub or Virtual WAN</text><text x="995" y="679" text-anchor="middle" class="node-text">Shared connectivity</text>
+  <rect x="1160" y="620" width="230" height="78" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="1275" y="653" text-anchor="middle" class="node-title">Workload subscriptions</text><text x="1275" y="679" text-anchor="middle" class="node-text">Production and non-production</text>
+  <path d="M990 553 V610 M1310 553 V590 H1275 V610 M1110 659 H1150" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="75" y="620" width="650" height="78" rx="14" fill="#ffffff" stroke="#b8c7d9"/><text x="400" y="653" text-anchor="middle" class="label">Management: central monitoring and automation</text><text x="400" y="678" text-anchor="middle" class="label">Security: security operations and SIEM</text>
+</svg>
