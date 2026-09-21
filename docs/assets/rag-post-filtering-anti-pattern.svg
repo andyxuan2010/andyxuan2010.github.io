@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" role="img" aria-labelledby="title desc">
+  <title id="title">RAG post-filtering anti-pattern</title>
+  <desc id="desc">The unsafe pattern retrieves all documents, generates an answer, and tries to remove citations after generation, allowing restricted content to influence the answer.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#b23b3b"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#5b2020}.subtitle{font:400 17px Arial,sans-serif;fill:#7d4b4b}.node-title{font:700 18px Arial,sans-serif;fill:#5b2020}.node-text{font:400 15px Arial,sans-serif;fill:#7d4b4b}.label{font:700 14px Arial,sans-serif;fill:#b23b3b}</style></defs>
+  <rect width="1600" height="480" fill="#fff8f7"/>
+  <text x="800" y="52" text-anchor="middle" class="title">Bad pattern: authorize after generation</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Restricted content has already influenced the model before the filter runs</text>
+  <rect x="55" y="145" width="285" height="140" rx="16" fill="#fff0ef" stroke="#c64b4b" stroke-width="3"/><text x="197" y="198" text-anchor="middle" class="node-title">Retrieve all documents</text><text x="197" y="230" text-anchor="middle" class="node-text">Authorized and restricted</text><text x="197" y="255" text-anchor="middle" class="node-text">content enters context</text>
+  <rect x="445" y="145" width="285" height="140" rx="16" fill="#fff0ef" stroke="#c64b4b" stroke-width="3"/><text x="587" y="198" text-anchor="middle" class="node-title">Generate answer</text><text x="587" y="230" text-anchor="middle" class="node-text">The model sees the</text><text x="587" y="255" text-anchor="middle" class="node-text">restricted evidence</text>
+  <rect x="835" y="145" width="285" height="140" rx="16" fill="#fff0ef" stroke="#c64b4b" stroke-width="3"/><text x="977" y="198" text-anchor="middle" class="node-title">Remove hidden citations</text><text x="977" y="230" text-anchor="middle" class="node-text">Presentation cleanup</text><text x="977" y="255" text-anchor="middle" class="node-text">cannot undo leakage</text>
+  <rect x="1225" y="145" width="320" height="140" rx="16" fill="#5b2020" stroke="#5b2020" stroke-width="3"/><text x="1385" y="198" text-anchor="middle" style="font:700 19px Arial,sans-serif;fill:#fff">Data exposure risk</text><text x="1385" y="230" text-anchor="middle" style="font:400 15px Arial,sans-serif;fill:#ffe4e1">Restricted content may</text><text x="1385" y="255" text-anchor="middle" style="font:400 15px Arial,sans-serif;fill:#ffe4e1">shape the response</text>
+  <path d="M340 215 H435 M730 215 H825 M1120 215 H1215" stroke="#b23b3b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <text x="800" y="375" text-anchor="middle" class="label">Authorization must happen before retrieval or during retrieval filtering.</text>
+</svg>

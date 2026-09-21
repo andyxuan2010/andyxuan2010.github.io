@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+  <title id="title">Azure Kubernetes Service platform architecture</title>
+  <desc id="desc">A connectivity and security hub provides firewall, private DNS, and privileged access to an AKS workload spoke. The spoke contains a private AKS API, managed ingress, cluster node pools, policy, secrets integration, monitoring, private container registry, Key Vault, and private endpoints.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 17px Arial,sans-serif;fill:#15253d}.node-text{font:400 14px Arial,sans-serif;fill:#52667f}.group{font:700 17px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="850" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">AKS platform architecture</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Separate connectivity, workload, identity, policy, and platform operations boundaries</text>
+
+  <rect x="45" y="135" width="300" height="565" rx="20" fill="#ffffff" stroke="#b8c7d9" stroke-width="3"/><text x="195" y="170" text-anchor="middle" class="group">Connectivity and security hub</text>
+  <rect x="80" y="220" width="230" height="80" rx="14" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="195" y="253" text-anchor="middle" class="node-title">Firewall</text><text x="195" y="279" text-anchor="middle" class="node-text">Secure egress</text>
+  <rect x="80" y="340" width="230" height="80" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="195" y="373" text-anchor="middle" class="node-title">Private DNS resolver</text><text x="195" y="399" text-anchor="middle" class="node-text">Name resolution</text>
+  <rect x="80" y="460" width="230" height="80" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="195" y="493" text-anchor="middle" class="node-title">Privileged access path</text><text x="195" y="519" text-anchor="middle" class="node-text">Platform engineers</text>
+
+  <rect x="395" y="105" width="1160" height="650" rx="20" fill="#ffffff" stroke="#b8c7d9" stroke-width="3"/><text x="975" y="140" text-anchor="middle" class="group">AKS workload spoke</text>
+  <rect x="445" y="185" width="220" height="78" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="555" y="218" text-anchor="middle" class="node-title">Private AKS API</text><text x="555" y="244" text-anchor="middle" class="node-text">Control plane access</text>
+  <rect x="710" y="185" width="260" height="78" rx="14" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="840" y="218" text-anchor="middle" class="node-title">Application Gateway</text><text x="840" y="244" text-anchor="middle" class="node-text">Managed ingress</text>
+  <rect x="1015" y="185" width="230" height="78" rx="14" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="1130" y="218" text-anchor="middle" class="node-title">Private registry</text><text x="1130" y="244" text-anchor="middle" class="node-text">Container images</text>
+  <rect x="1280" y="185" width="230" height="78" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="1395" y="218" text-anchor="middle" class="node-title">Key Vault</text><text x="1395" y="244" text-anchor="middle" class="node-text">Application secrets</text>
+
+  <rect x="445" y="315" width="700" height="355" rx="18" fill="#f7f9fc" stroke="#52667f" stroke-width="3" stroke-dasharray="10 8"/><text x="795" y="347" text-anchor="middle" class="group">AKS cluster</text>
+  <rect x="485" y="385" width="190" height="80" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="580" y="418" text-anchor="middle" class="node-title">System node pool</text><text x="580" y="444" text-anchor="middle" class="node-text">Platform services</text>
+  <rect x="710" y="385" width="190" height="80" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="805" y="418" text-anchor="middle" class="node-title">Application pools</text><text x="805" y="444" text-anchor="middle" class="node-text">Workload compute</text>
+  <rect x="935" y="385" width="170" height="80" rx="14" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="1020" y="418" text-anchor="middle" class="node-title">Ingress</text><text x="1020" y="444" text-anchor="middle" class="node-text">Routing</text>
+  <rect x="485" y="515" width="190" height="80" rx="14" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="580" y="548" text-anchor="middle" class="node-title">Policy and admission</text><text x="580" y="574" text-anchor="middle" class="node-text">Guardrails</text>
+  <rect x="710" y="515" width="190" height="80" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="805" y="548" text-anchor="middle" class="node-title">Secrets Store CSI</text><text x="805" y="574" text-anchor="middle" class="node-text">Secret injection</text>
+  <rect x="935" y="515" width="170" height="80" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="1020" y="548" text-anchor="middle" class="node-title">Monitoring agents</text><text x="1020" y="574" text-anchor="middle" class="node-text">Telemetry</text>
+  <rect x="1260" y="355" width="230" height="78" rx="14" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="1375" y="388" text-anchor="middle" class="node-title">Private endpoints</text><text x="1375" y="414" text-anchor="middle" class="node-text">Private service access</text>
+
+  <rect x="75" y="65" width="170" height="55" rx="12" fill="#ffffff" stroke="#b8c7d9"/><text x="160" y="99" text-anchor="middle" class="node-title">Platform engineers</text>
+  <rect x="425" y="65" width="150" height="55" rx="12" fill="#ffffff" stroke="#b8c7d9"/><text x="500" y="99" text-anchor="middle" class="node-title">Clients</text>
+  <path d="M160 120 V450 H185" fill="none" stroke="#7654c5" stroke-width="4" marker-end="url(#arrow)"/><path d="M245 492 H435 V224 H545" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M500 120 V224 H700" fill="none" stroke="#2878c8" stroke-width="4" marker-end="url(#arrow)"/><path d="M970 224 H1005 M840 263 V375 H1020" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M555 263 V375 H580 M555 263 V365 H805" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/><path d="M310 380 H425 V224 H545" fill="none" stroke="#16849a" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M900 555 H1250 V224 H1265 M900 555 H1250 V394 H1250" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M900 425 H925 M900 555 H925 M675 425 H700" fill="none" stroke="#52667f" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="495" y="785" width="960" height="38" rx="19" fill="#ffffff" stroke="#b8c7d9"/><text x="975" y="810" text-anchor="middle" class="label">Private API access, managed ingress, policy, secrets, monitoring, and secure egress are platform concerns</text>
+</svg>

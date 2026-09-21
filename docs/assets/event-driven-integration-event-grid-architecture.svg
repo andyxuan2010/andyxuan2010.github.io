@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Event-driven integration architecture with Azure Event Grid</title>
+  <desc id="desc">Azure system events, application events, SaaS partner events, and MQTT device events enter Azure Event Grid topics or namespaces. Event subscriptions filter events and deliver them through HTTP push, HTTP pull, or MQTT to Functions, Logic Apps, webhooks, Event Hubs, and Service Bus. Event Grid distributes notifications; Service Bus owns durable business work. Identity, private networking, deployment, and monitoring govern the event flow.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker>
+    <marker id="event-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#16849a"/></marker>
+    <marker id="work-arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#2e8b57"/></marker>
+    <marker id="control-arrow" markerWidth="12" markerHeight="12" refX="10" cy="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#7654c5"/></marker>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#15253d}
+      .subtitle{font:400 17px Arial,sans-serif;fill:#52667f}
+      .boundary-title{font:700 21px Arial,sans-serif;fill:#15253d}
+      .node-title{font:700 18px Arial,sans-serif;fill:#15253d}
+      .node-text{font:400 15px Arial,sans-serif;fill:#52667f}
+      .label{font:700 14px Arial,sans-serif;fill:#52667f}
+    </style>
+  </defs>
+
+  <rect width="1800" height="900" fill="#f7f9fc"/>
+  <text x="900" y="48" text-anchor="middle" class="title">Event-driven integration with Azure Event Grid</text>
+  <text x="900" y="78" text-anchor="middle" class="subtitle">Route discrete state-change notifications while durable business work remains in Service Bus</text>
+
+  <rect x="45" y="112" width="350" height="82" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="220" y="147" text-anchor="middle" class="node-title">Microsoft Entra ID and Key Vault</text>
+  <text x="220" y="173" text-anchor="middle" class="node-text">Publisher, subscriber, secrets, and certificates</text>
+  <rect x="425" y="112" width="350" height="82" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="600" y="147" text-anchor="middle" class="node-title">CI/CD and infrastructure as code</text>
+  <text x="600" y="173" text-anchor="middle" class="node-text">Topics, filters, routes, handlers, and rollback</text>
+  <rect x="805" y="112" width="350" height="82" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="980" y="147" text-anchor="middle" class="node-title">Azure Monitor and operations</text>
+  <text x="980" y="173" text-anchor="middle" class="node-text">Delivery, retries, duplicates, lag, and replay</text>
+  <rect x="1185" y="112" width="570" height="82" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="1470" y="147" text-anchor="middle" class="node-title">Private networking and event contracts</text>
+  <text x="1470" y="173" text-anchor="middle" class="node-text">Private endpoints, DNS, CloudEvents, schema, and scope</text>
+
+  <text x="45" y="238" class="boundary-title">Event sources</text>
+  <rect x="45" y="260" width="275" height="92" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="182" y="296" text-anchor="middle" class="node-title">Azure system events</text>
+  <text x="182" y="322" text-anchor="middle" class="node-text">Blob created and resource changed</text>
+  <rect x="45" y="382" width="275" height="92" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="182" y="418" text-anchor="middle" class="node-title">Application events</text>
+  <text x="182" y="444" text-anchor="middle" class="node-text">Order completed and state changed</text>
+  <rect x="45" y="504" width="275" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="182" y="540" text-anchor="middle" class="node-title">SaaS partner events</text>
+  <text x="182" y="566" text-anchor="middle" class="node-text">Partner topics and external notifications</text>
+  <rect x="45" y="626" width="275" height="92" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="182" y="662" text-anchor="middle" class="node-title">Devices and IoT clients</text>
+  <text x="182" y="688" text-anchor="middle" class="node-text">MQTT state, commands, and device signals</text>
+
+  <rect x="470" y="220" width="740" height="540" rx="22" fill="#ffffff" stroke="#7654c5" stroke-width="3"/>
+  <text x="505" y="260" class="boundary-title">Azure Event Grid distribution boundary</text>
+  <text x="505" y="286" class="node-text">Filtering and delivery of events; not a transactional business broker</text>
+  <rect x="505" y="315" width="310" height="145" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="660" y="354" text-anchor="middle" class="node-title">Topics and subscriptions</text>
+  <text x="660" y="381" text-anchor="middle" class="node-text">System, custom, partner, and namespace topics</text>
+  <text x="660" y="404" text-anchor="middle" class="node-text">Event type, subject, source, and data filters</text>
+  <text x="660" y="427" text-anchor="middle" class="node-text">CloudEvents 1.0 and schema versions</text>
+  <rect x="855" y="315" width="310" height="145" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1010" y="354" text-anchor="middle" class="node-title">HTTP event delivery</text>
+  <text x="1010" y="381" text-anchor="middle" class="node-text">Push to webhooks and Azure handlers</text>
+  <text x="1010" y="404" text-anchor="middle" class="node-text">Pull from namespace topics</text>
+  <text x="1010" y="427" text-anchor="middle" class="node-text">Retry, receive, acknowledge, and release</text>
+  <rect x="505" y="515" width="310" height="120" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/>
+  <text x="660" y="553" text-anchor="middle" class="node-title">MQTT broker</text>
+  <text x="660" y="580" text-anchor="middle" class="node-text">MQTT v3.1.1 and v5 pub-sub</text>
+  <text x="660" y="603" text-anchor="middle" class="node-text">Topic spaces, clients, permissions, and routes</text>
+  <rect x="855" y="515" width="310" height="120" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1010" y="553" text-anchor="middle" class="node-title">Delivery policy</text>
+  <text x="1010" y="580" text-anchor="middle" class="node-text">Idempotency, retry, expiry, and quarantine</text>
+  <text x="1010" y="603" text-anchor="middle" class="node-text">Private link, identity, and audit controls</text>
+  <rect x="600" y="680" width="480" height="52" rx="26" fill="#ffffff" stroke="#b8c7d9"/>
+  <text x="840" y="713" text-anchor="middle" class="label">Event Grid distributes notifications; it does not guarantee business completion</text>
+
+  <text x="1300" y="238" class="boundary-title">Consumers and handoffs</text>
+  <rect x="1300" y="260" width="455" height="92" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/>
+  <text x="1527" y="296" text-anchor="middle" class="node-title">Webhooks and APIs</text>
+  <text x="1527" y="322" text-anchor="middle" class="node-text">Authenticated, idempotent notification handlers</text>
+  <rect x="1300" y="382" width="455" height="92" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/>
+  <text x="1527" y="418" text-anchor="middle" class="node-title">Functions and Logic Apps</text>
+  <text x="1527" y="444" text-anchor="middle" class="node-text">Custom reactions and connector workflows</text>
+  <rect x="1300" y="504" width="455" height="92" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/>
+  <text x="1527" y="540" text-anchor="middle" class="node-title">Event Hubs and data platforms</text>
+  <text x="1527" y="566" text-anchor="middle" class="node-text">Telemetry, streams, analytics, and visualization</text>
+  <rect x="1300" y="626" width="455" height="92" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/>
+  <text x="1527" y="662" text-anchor="middle" class="node-title">Service Bus durable work</text>
+  <text x="1527" y="688" text-anchor="middle" class="node-text">Commands, transactions, sessions, and DLQs</text>
+
+  <path d="M320 306 H455" stroke="#16849a" stroke-width="4" fill="none" marker-end="url(#event-arrow)"/>
+  <path d="M320 428 H455 V390 H490" stroke="#16849a" stroke-width="4" fill="none" marker-end="url(#event-arrow)"/>
+  <path d="M320 550 H455 V390 H490" stroke="#16849a" stroke-width="4" fill="none" marker-end="url(#event-arrow)"/>
+  <path d="M320 672 H455 V575 H490" stroke="#d99a00" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M815 387 H845" stroke="#16849a" stroke-width="4" fill="none" marker-end="url(#event-arrow)"/>
+  <path d="M1165 387 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V428 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V550 H1280" stroke="#52667f" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1165 387 H1235 V672 H1280" stroke="#2e8b57" stroke-width="5" fill="none" marker-end="url(#work-arrow)"/>
+  <path d="M815 575 H1235 V672 H1280" stroke="#2e8b57" stroke-width="5" stroke-dasharray="12 8" fill="none" marker-end="url(#work-arrow)"/>
+  <path d="M220 194 V215 H660 V305" stroke="#2878c8" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M600 194 V215 H1010 V305" stroke="#7654c5" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M980 194 V215 H1010 V505" stroke="#16849a" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+  <path d="M1470 194 V215 H1110 V505" stroke="#d99a00" stroke-width="3" stroke-dasharray="8 7" fill="none" marker-end="url(#control-arrow)"/>
+
+  <text x="390" y="298" text-anchor="middle" class="label">event</text>
+  <text x="1215" y="372" text-anchor="middle" class="label">notification</text>
+  <text x="1215" y="660" text-anchor="middle" class="label">durable handoff</text>
+  <text x="900" y="850" text-anchor="middle" class="label">Use Event Grid for state-change notification · Use Service Bus for durable business messaging</text>
+</svg>

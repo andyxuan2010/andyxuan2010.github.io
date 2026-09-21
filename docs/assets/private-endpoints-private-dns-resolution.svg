@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" role="img" aria-labelledby="title desc">
+  <title id="title">Private endpoint and private DNS resolution flow</title>
+  <desc id="desc">An application resolves a service hostname through an enterprise resolver and private DNS zone, receives a private endpoint address, then reaches the managed service over a private path using TLS and the service hostname.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.lane-title{font:700 18px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.step{font:700 14px Arial,sans-serif;fill:#2878c8}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="680" fill="#f7f9fc"/>
+  <text x="800" y="46" text-anchor="middle" class="title">Private endpoint and private DNS resolution</text>
+  <text x="800" y="75" text-anchor="middle" class="subtitle">Resolve the provider hostname to a private address before establishing the service connection</text>
+
+  <rect x="35" y="120" width="270" height="68" rx="14" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="170" y="161" text-anchor="middle" class="lane-title">Application</text>
+  <rect x="335" y="120" width="270" height="68" rx="14" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="470" y="161" text-anchor="middle" class="lane-title">Enterprise resolver</text>
+  <rect x="635" y="120" width="270" height="68" rx="14" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="770" y="161" text-anchor="middle" class="lane-title">Private DNS zone</text>
+  <rect x="935" y="120" width="270" height="68" rx="14" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="1070" y="161" text-anchor="middle" class="lane-title">Private endpoint</text>
+  <rect x="1235" y="120" width="330" height="68" rx="14" fill="#fff3e8" stroke="#c55a11" stroke-width="3"/><text x="1400" y="161" text-anchor="middle" class="lane-title">Managed service</text>
+
+  <path d="M170 188 V570 M470 188 V570 M770 188 V570 M1070 188 V570 M1400 188 V570" stroke="#b8c7d9" stroke-width="3" stroke-dasharray="8 8"/>
+  <circle cx="170" cy="245" r="20" fill="#2878c8"/><text x="170" y="250" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">1</text><text x="205" y="250" class="node-text">Resolve provider service FQDN</text>
+  <path d="M190 245 H450" fill="none" stroke="#2878c8" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="470" cy="330" r="20" fill="#16849a"/><text x="470" y="335" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">2</text><text x="505" y="335" class="node-text">Query private zone</text>
+  <path d="M490 330 H750" fill="none" stroke="#16849a" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="770" cy="415" r="20" fill="#7654c5"/><text x="770" y="420" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">3</text><text x="805" y="420" class="node-text">Return private endpoint address</text>
+  <path d="M750 415 H490" fill="none" stroke="#7654c5" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="470" cy="500" r="20" fill="#16849a"/><text x="470" y="505" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">4</text><text x="205" y="505" class="node-text">Return private IP to application</text>
+  <path d="M450 500 H190" fill="none" stroke="#16849a" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="170" cy="570" r="20" fill="#2878c8"/><text x="170" y="575" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">5</text><text x="205" y="575" class="node-text">TLS using service hostname</text>
+  <path d="M190 570 C520 620 830 620 1050 570" fill="none" stroke="#2878c8" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="800" y="628" text-anchor="middle" class="label">Private service path from endpoint to managed service</text>
+  <path d="M1090 570 C1240 620 1340 620 1390 570" fill="none" stroke="#2e8b57" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+  <rect x="460" y="205" width="700" height="48" rx="24" fill="#ffffff" stroke="#b8c7d9"/><text x="810" y="235" text-anchor="middle" class="label">The hostname remains stable; DNS determines whether the path is public or private</text>
+</svg>

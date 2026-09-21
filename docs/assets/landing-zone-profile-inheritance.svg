@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Landing zone profile inheritance and workload overlays</title>
+  <desc id="desc">Guardrails flow from the enterprise baseline through provider and environment profiles to regulatory overlays and a workload-specific extension.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#52667f"/></marker><style>.title{font:700 30px Arial,sans-serif;fill:#15253d}.subtitle{font:400 17px Arial,sans-serif;fill:#52667f}.node-title{font:700 19px Arial,sans-serif;fill:#15253d}.node-text{font:400 15px Arial,sans-serif;fill:#52667f}.label{font:700 14px Arial,sans-serif;fill:#52667f}</style></defs>
+  <rect width="1600" height="620" fill="#f7f9fc"/>
+  <text x="800" y="52" text-anchor="middle" class="title">Landing-zone profile inheritance</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Each lower layer may add controls, but it cannot weaken inherited guardrails</text>
+  <path d="M800 155 V540" stroke="#52667f" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="465" y="120" width="670" height="72" rx="16" fill="#eef5ff" stroke="#2878c8" stroke-width="3"/><text x="800" y="164" text-anchor="middle" class="node-title">Enterprise baseline</text>
+  <rect x="465" y="205" width="670" height="72" rx="16" fill="#edf8fb" stroke="#16849a" stroke-width="3"/><text x="800" y="249" text-anchor="middle" class="node-title">Provider baseline</text>
+  <rect x="465" y="290" width="670" height="72" rx="16" fill="#eef8f1" stroke="#2e8b57" stroke-width="3"/><text x="800" y="334" text-anchor="middle" class="node-title">Environment profile</text>
+  <rect x="465" y="375" width="670" height="72" rx="16" fill="#fff8e8" stroke="#d99a00" stroke-width="3"/><text x="800" y="419" text-anchor="middle" class="node-title">Regulatory or data overlay</text>
+  <rect x="465" y="460" width="670" height="72" rx="16" fill="#f4efff" stroke="#7654c5" stroke-width="3"/><text x="800" y="504" text-anchor="middle" class="node-title">Workload-specific extension</text>
+  <text x="280" y="255" text-anchor="middle" class="label">Inherited guardrails</text><path d="M365 255 H450" stroke="#98a2b3" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="1300" y="420" text-anchor="middle" class="label">Effective profile recorded</text><path d="M1150 420 H1210" stroke="#98a2b3" stroke-width="2" stroke-dasharray="7 6"/>
+</svg>
